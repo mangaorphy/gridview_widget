@@ -1,16 +1,36 @@
-# gridview_learning
+# GridView Learning
 
-A new Flutter project.
+A simple project to explore and demonstrate the use of GridView in Flutter.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. **Clone the repository:**
+    ```bash
+    https://github.com/mangaorphy/gridview_widget.git
+    cd gridview_learning
+    ```
+2. **Install dependencies:**
+    ```
+    flutter pub get
+    ```
+3. **Run the project:**
+    ```
+    flutter run
+    ```
+## GridView Widget has 3 Constructors
+-- **GridView.count -----> Tab 1**
+-- **GridView.builder -----> Tab 2**
+-- **GridView.extent -----> Tab 3**
 
-A few resources to get you started if this is your first Flutter project:
+## Attribute Notes
+- **GridView:** Used to display items in a grid layout.
+- **Item Count:** Dynamically set based on data source.
+- **CrossAxisCount:** Controls the number of columns.
+- **ItemBuilder:** Efficiently builds grid items on demand.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Screenshot showing a demo app
+
+![GridView Screenshot](assets/gridview.jpeg)
+

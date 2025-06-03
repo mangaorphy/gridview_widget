@@ -39,12 +39,15 @@ Widget build(BuildContext context) {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('GridView Demo'),
+          title: const Text('GridView Demo', style: TextStyle(fontWeight: FontWeight.bold)),
+          centerTitle: true,
+          backgroundColor: Colors.blue,
+          
           bottom: const TabBar(
             tabs: [
-              Tab(text: "count"),
-              Tab(text: "builder"),
-              Tab(text: "extent"),
+              Tab(child: Text("count", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.green))),
+              Tab(child: Text("builder", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red))),
+              Tab(child: Text("extent", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.purple))),
             ],
           ),
         ),
@@ -69,7 +72,7 @@ Widget build(BuildContext context) {
             // --- GridView.builder with Images and Text ---
             GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
+                crossAxisCount: 3,
                 childAspectRatio: 0.8, // Adjust height for text space
               ),
               itemCount: items.length,
