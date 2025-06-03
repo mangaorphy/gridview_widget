@@ -66,6 +66,55 @@ Widget build(BuildContext context) {
               ),
             ),
 
+            // --- GridView.builder with Images and Text ---
+            GridView.builder(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4,
+                childAspectRatio: 0.8, // Adjust height for text space
+              ),
+              itemCount: items.length,
+              itemBuilder: (context, index) {
+                return Card(
+                  elevation: 4,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          child: Image.network(
+                            items[index],
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          'Description $index',
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
+            ),
+
+            // --- GridView.extent with Images ---
+            GridView.extent(
+              maxCrossAxisExtent: 150,
+              children: List.generate(
+                items.length,
+                (index) => Card(
+                  color: Colors.orangeAccent,
+                  child: Image.network(
+                    items[index],
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
